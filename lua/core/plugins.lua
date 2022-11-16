@@ -42,8 +42,8 @@ packer.init {
 return packer.startup(function(use)
   -- Add your plugins here:
   use "wbthomason/packer.nvim" -- packer can manage itself
-  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "numToStr/Comment.nvim" -- Easily comment stuff
+
+  use "nvim-lua/popup.nvim" 
   use "moll/vim-bbye"
   use "ahmedkhalf/project.nvim"
   use "lewis6991/impatient.nvim"
@@ -64,6 +64,9 @@ return packer.startup(function(use)
   
   -- Bufferline
   use "akinsho/bufferline.nvim"
+
+  -- Comments 
+  use "numToStr/Comment.nvim" 
 
   -- git labels
   use {
@@ -87,12 +90,12 @@ return packer.startup(function(use)
   use {
     'hrsh7th/nvim-cmp',
     requires = {
-      'L3MON4D3/LuaSnip',
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-path',
       'hrsh7th/cmp-buffer',
       'saadparwaiz1/cmp_luasnip',
       "rafamadriz/friendly-snippets",
+      'L3MON4D3/LuaSnip',
     },
   }
 
@@ -100,10 +103,9 @@ return packer.startup(function(use)
   use {
       "neovim/nvim-lspconfig",
     requires = {
+      "jose-elias-alvarez/null-ls.nvim",
       "williamboman/nvim-lsp-installer",
       "tamago324/nlsp-settings.nvim",
-      "jose-elias-alvarez/null-ls.nvim",
-      "antoinemadec/FixCursorHold.nvim",
     },
   }
   -- Autopair
