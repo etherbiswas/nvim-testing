@@ -47,17 +47,6 @@ vim.opt.relativenumber = true
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = { "number", "line" }
 
--- spell checking
-vim.opt.spell = false
-vim.opt.spelllang = {"en_us", "de_de", "cjk"}
-vim.opt.spellfile = vim.fn.expand("~/.local/share/nvim/site/spell/spf.%s.add"):format(vim.o.encoding)
-vim.opt.thesaurusfunc = "v:lua.vim.openoffice.thesaurusfunc" -- support openoffice thesauri, see plugin/thesaurus.lua
-vim.opt.thesaurus = {
-  -- archlinux packages extra/mythes-{en,de,..}
-  "/usr/share/mythes/th_en_US_v2.dat",
-  "/usr/share/mythes/th_de_DE_v2.dat"
-}
-
 -- mouse and clipboard integration
 vim.opt.clipboard = "unnamedplus"
 vim.opt.backup = false
@@ -252,7 +241,7 @@ end
 -------------------------------------------------------------------------------
 -- {{{ Plugin-Specific Configuration
 -------------------------------------------------------------------------------
-require('plugins')
+require("core/plugins")
 
 -- Gruvbox-Material
 -------------------------------------------------------------------------------
